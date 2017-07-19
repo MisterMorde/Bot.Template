@@ -87,20 +87,14 @@ namespace Bot.Template
             }
             Console.WriteLine("Configuration has been loaded");
         }
-            public IServiceProvider ConfigureServices()
+        
+        public IServiceProvider ConfigureServices()
         {
-
             var services = new ServiceCollection()
                 .AddSingleton(client)
                  .AddSingleton(new CommandService(new CommandServiceConfig { CaseSensitiveCommands = false }));
             var provider = new DefaultServiceProviderFactory().CreateServiceProvider(services);
-
-
-
-
             return provider;
         }
-
-
     }
 }
