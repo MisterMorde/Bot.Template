@@ -21,7 +21,6 @@ namespace Bot.Template
         {
             EnsureBotConfigExists(); // Ensure that the bot configuration json file has been created.
 
-            client = new DiscordSocketClient();
             client = new DiscordSocketClient(new DiscordSocketConfig()
             {
                 LogLevel = LogSeverity.Verbose,
